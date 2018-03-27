@@ -5,9 +5,9 @@ import gume.AutoGuma;
 
 /**
  * 
+ * Klasa VulkanizerskaRadnja sadrzi listu guma i metode koje ubacuju i pronalaze gumu
  * @author MiljanSimonovic
  * @version 1.0
- * Klasa VulkanizerskaRadnja sadrzi listu guma i metode koje ubacuju i pronalaze gumu
  *
  */
 public class VulkanizerskaRadnja {
@@ -18,7 +18,7 @@ public class VulkanizerskaRadnja {
 
 	/**
 	 * metoda koja dodaje novu gumu na pocetak liste guma
-	 * @param a
+	 * @param a kojim se prosledjuje guma
 	 * @throws java.lang.NullPointerException ako je guma null
 	 * @throws java.lang.RuntimeException ako guma vec postoji u listi
 	 */
@@ -32,8 +32,8 @@ public class VulkanizerskaRadnja {
 
 	/**
 	 * metoda koja pronalazi gumu na osnovu unetog modela
-	 * @param markaModel
-	 * @return novaLista/null ako je unet model null
+	 * @param markaModel prosledjuje se marka, odnosno model gume
+	 * @return novaLista lista guma
 	 */
 	public LinkedList<AutoGuma> pronadjiGumu(String markaModel) {
 		if (markaModel == null)
@@ -42,6 +42,7 @@ public class VulkanizerskaRadnja {
 		for (int i = 0; i < gume.size(); i++)
 			if (gume.get(i).getMarkaModel().equals(markaModel))
 				novaLista.add(gume.get(i));
+		
 		if(novaLista.size()==0)
 			return null;
 		else

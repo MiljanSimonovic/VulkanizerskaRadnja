@@ -2,10 +2,10 @@ package gume;
 
 /**
  * 
+ * Klasa AutoGuma sadrzi parametre precnik, sirina, visina,
+ * odgovarajuce get i set metode, kao i equals i toString metode
  * @author MiljanSimonovic
  * @version 1.0
- * Klasa AutoGuma sadrzi parametre @param precnik, @param sirina, @param visina,
- * odgovarajuce get i set metode, kao i equals i toString metode
  *
  */
 public class AutoGuma {
@@ -34,7 +34,7 @@ public class AutoGuma {
 	}
 	/**
 	 * metoda kojom se postavlja marka, odnosno model gume
-	 * @param markaModel
+	 * @param markaModel marka, odnosno model gume
 	 * @throws java.lang.RuntimeException ako je marka null ili ako je duzina reci manja od 3
 	 */
 	public void setMarkaModel(String markaModel) {
@@ -51,7 +51,7 @@ public class AutoGuma {
 	}
 	/**
 	 * metoda kojom se postavlja precnik gume
-	 * @param precnik
+	 * @param precnik precnik gume
 	 * @throws java.lang.RuntimeException ako je precnik gume manji od 13 i veci od 22
 	 */
 	public void setPrecnik(int precnik) {
@@ -68,7 +68,7 @@ public class AutoGuma {
 	}
 	/**
 	 * metoda kojom se postavlja sirina gume
-	 * @param sirina
+	 * @param sirina sirina gume
 	 * @throws java.lang.RuntimeException ako je sirina gume manja od 135 i veca od 355
 	 */
 	public void setSirina(int sirina) {
@@ -85,7 +85,7 @@ public class AutoGuma {
 	}
 	/**
 	 * metoda kojom se postavlja visina gume
-	 * @param visina
+	 * @param visina visina gume
 	 * @throws java.lang.RuntimeException ako je visina gume manja od 25 ili veca od 95
 	 */
 	public void setVisina(int visina) {
@@ -103,9 +103,12 @@ public class AutoGuma {
 				+ visina + "]";
 	}
 	/**
-	 * metoda koja poredi dva objekta klase AutoGuma, tacnije sve njihove atribute i vraca:
-	 * @return true, ako su svi atributi medjusobno jednaki
-	 * @return false, ako nisu svi jednaki
+	 * metoda koja poredi dva objekta klase AutoGuma, tacnije sve njihove atribute
+	 * @return
+	 * <ul>
+	 * 		<li>true, ako su svi atributi medjusobno jednaki</li>
+	 * 		<li>false, ako nisu svi jednaki</li>
+	 * </ul>
 	 */
 	@Override
 	public boolean equals(Object obj) {
